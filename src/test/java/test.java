@@ -1,9 +1,14 @@
 import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
 
 import Junit.BootCamp;
 import Junit.Grader;
 import Junit.SimpleCalculator;
+import Junit.User;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class test {
     @Test
@@ -48,6 +53,34 @@ public class test {
                 () -> {
                     grader.determineLetterGrade(-1);
                 });
+    }
 
+    @Test
+    @DisplayName("User should be at least 18")
+    void user_should_be_at_least_18() {
+        var user = new User("Marco", 37, false);
+        assertThat(user.getAge()).isGreaterThanOrEqualTo(18);
+
+    }
+
+    @Test
+    @DisplayName("Marco should be blocked")
+    void marco_should_be_blocked() {
+        var user = new User("Marco", 37, false);
+        assertThat(user.isBlocked())
+                .as("User %s should be blocked", user.getName())
+                .isTrue();
+    }
+
+    @Test
+    void user_should_be_marco() {
+        var user = new User("Marco", 37, false);
+        assertThat(user.getName()).isEqualToIgnoringCase("marco");
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {17, 50, 80})
+    void all_friends_should_at_least_be_18(int age) {
+        assertThat(age).isGreaterThanOrEqualTo(18);
     }
 }
