@@ -1,9 +1,4 @@
-package Leetcode;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.Predicate;
+package CodingPractice;
 
 public class p2248 {
     public String solution(String my_string, String overwrite_string, int s) {

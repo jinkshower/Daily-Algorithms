@@ -1,4 +1,4 @@
-package Leetcode;
+package CodingPractice;
 
 public class p181942 {
     public String solution(String str1, String str2) {
