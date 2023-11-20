@@ -15,7 +15,6 @@ public class FunctionalInterface {
         List<Integer> list2 = new ArrayList<>();
 
         makeRandom(s, list);
-        System.out.println(list);
         makeRandomWithGenerics(s, list2);
         System.out.println(list2);
 
