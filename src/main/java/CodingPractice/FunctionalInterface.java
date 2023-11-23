@@ -25,6 +25,14 @@ public class FunctionalInterface {
 
         str = opt.orElse("EMPTY");
         System.out.println(str);
+
+        //     public static List<CoinSet> highestOrder() {
+        // return Arrays.stream(values())
+        //         .sorted((o1, o2) -> Integer.compare(o2.value, o1.value))
+        //         .collect(Collectors.toList())
+        //         ;
+        // ENUM SORTING 
+    }
     }
 
     static void makeRandom(Supplier<Integer> s, List<Integer> list) {
