@@ -12,6 +12,8 @@ public class Quiz2_1 {
             String output = appleFormatter.accept(apple);
             System.out.println(output);
         }
+        //List<Apple> result =
+        //          filterApples(inventory, (Apple apple) -> RED.equals(apple.getColor()));
     }
 
     class Apple {
