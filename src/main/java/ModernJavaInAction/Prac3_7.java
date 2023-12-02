@@ -11,7 +11,7 @@ public class Prac3_7 {
                 new Apple(155, "green"),
                 new Apple(120, "red")
         );
-        inventory.sort(Comparator.comparing(Apple::getWeight);
+        inventory.sort(Comparator.comparing(Apple::getWeight));
         Comparator<Apple> c = Comparator.comparing(Apple::getWeight);
     }
 
