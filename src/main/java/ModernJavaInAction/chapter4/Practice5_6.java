@@ -3,6 +3,8 @@ package ModernJavaInAction.chapter4;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Practice5_6 {
     public static void main(String[] args) {
@@ -36,6 +38,33 @@ public class Practice5_6 {
                 .sorted(Comparator.comparing(Trader::getName))
                 .toList();
 
+        String fourth = transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+
+        Optional<Trader> fifth = transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("Milan"))
+                .findAny();
+
+        transactions.stream()
+                .filter(transaction -> transaction.getTrader().getCity().equals("Cambridge"))
+                .sorted(Comparator.comparing(Transaction::getValue))
+                .forEach(transaction -> System.out.println(transaction.getValue()));
+
+        transactions.stream()
+                .filter(transaction -> "Cambridge".equals(transaction.getTrader().getCity()))
+                .map(Transaction::getValue)
+                .forEach(System.out::println);
+
+        Optional<Integer> highestValue = transactions.stream()
+                .map(Transaction::getValue)
+                .reduce(Integer::max);
+
+        Optional<Transaction> smallestValueTransaction = transactions.stream()
+                .min(Comparator.comparing(Transaction::getValue));
     }
 
     public static class Trader {
