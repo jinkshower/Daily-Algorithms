@@ -6,8 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class ReaderPrac {
+
+    private static final Pattern REGEX = Pattern.compile("^\\[[가-힣]+,\\d+,\\d+\\]$");
 
     public List<String> readLines() {
 
