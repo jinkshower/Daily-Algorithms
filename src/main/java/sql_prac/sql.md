@@ -107,3 +107,20 @@ COUNT(*) AS count
 FROM ANIMAL_INS
 GROUP BY 1
 ORDER BY ANIMAL_TYPE
+
+//입양시각 구하기
+SELECT HOUR(DATETIME) as HOUR,
+count(*) as COUNT
+from animal_outs
+where hour(datetime) between 9 and 19
+GROUP BY 1
+ORDER BY HOUR(DATETIME)
+
+//진료과별 총 예약 횟수 출력하기
+SELECT MCDP_CD AS "진료과코드",
+count(*) as "5월예약건수"
+from appointment
+where extract(YEAR_MONTH from apnt_ymd) = '202205'
+group by 1
+order by 2 asc, 1 asc
+
