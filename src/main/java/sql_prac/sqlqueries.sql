@@ -124,3 +124,23 @@ where extract(YEAR_MONTH from apnt_ymd) = '202205'
 group by 1
 order by 2 asc, 1 asc
 
+// 자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기
+select car_type, count(1) as CARS
+from car_rental_company_car
+where options regexp '통풍시트|열선시트|가죽시트'
+group by 1
+order by 1 asc
+
+//오랜 기간 보호한 동물(1)
+SELECT a.name, a.datetime
+from animal_ins a left join animal_outs b on a.animal_id = b.animal_id
+where b.datetime is null
+order by a.datetime
+limit 3
+
+//카테고리 별 도서 판매량 집계하기
+SELECT CATEGORY, sum(sales) as TOTAL_SALES
+from book a inner join book_sales b on a.book_id = b.book_id
+where extract(YEAR_MONTH from b.sales_date) = '202201'
+group by 1
+order by 1 asc
