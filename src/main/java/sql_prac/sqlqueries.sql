@@ -144,3 +144,22 @@ from book a inner join book_sales b on a.book_id = b.book_id
 where extract(YEAR_MONTH from b.sales_date) = '202201'
 group by 1
 order by 1 asc
+
+//상품 별 오프라인 매출 찾기
+SELECT a.PRODUCT_CODE,
+(a.price * sum(b.sales_amount)) as SALES
+from product a inner join offline_sale b on a.product_id = b.product_id
+group by 1
+order by 2 desc, 1 asc
+
+//있었는데요 없었습니다
+SELECT a.animal_id, a.name
+from animal_ins a inner join animal_outs b on a.animal_id = b.animal_id
+where a.datetime > b.datetime
+order by a.datetime asc
+
+//오랜 기간 보호한 동물(2)
+SELECT a.animal_id, a.name
+from animal_ins a inner join animal_outs b on a.animal_id = b.animal_id
+order by b.datetime - a.datetime desc
+limit 2
