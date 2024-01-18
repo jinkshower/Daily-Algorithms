@@ -163,3 +163,22 @@ SELECT a.animal_id, a.name
 from animal_ins a inner join animal_outs b on a.animal_id = b.animal_id
 order by b.datetime - a.datetime desc
 limit 2
+
+//보호소에서 중성화한 동물
+select c.animal_id, animal_type, name
+from
+(
+select a.*
+from animal_outs a join animal_ins b
+where a.animal_id = b.animal_id
+and b.sex_upon_intake like '%intact%'
+) c
+where c.sex_upon_outcome regexp 'Neutered|Spayed'
+
+
+//조건에 맞는 도서와 저자 리스트 출력하기
+SELECT a.book_id, b.author_name, date_format(a.published_date, '%Y-%m-%d') as published_date
+from book a join author b
+where a.author_id = b.author_id
+and a.category = '경제'
+order by 3 asc
