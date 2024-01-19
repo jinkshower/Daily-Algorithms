@@ -182,3 +182,16 @@ from book a join author b
 where a.author_id = b.author_id
 and a.category = '경제'
 order by 3 asc
+
+//조건별로 분류하여 주문상태 출력하기
+SELECT order_id, product_id, date_format(out_date, '%Y-%m-%d') as out_date,
+       case when date(out_date) <= '2022-05-01' then '출고완료'
+        when date(out_date) > '2022-05-01' then '출고대기'
+        else '출고미정' end '출고여부'
+from food_order
+order by 1 asc
+
+//성분으로 구분한 아이스크림 총 주문량
+SELECT b.ingredient_type, sum(total_order) as TOTAL_ORDER
+from first_half a join icecream_info b where a.flavor = b.flavor
+group by 1
