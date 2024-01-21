@@ -195,3 +195,51 @@ order by 1 asc
 SELECT b.ingredient_type, sum(total_order) as TOTAL_ORDER
 from first_half a join icecream_info b where a.flavor = b.flavor
 group by 1
+
+//루시와 엘라 찾기
+SELECT animal_id, name, sex_upon_intake
+from animal_ins
+where name in ('Lucy', 'Ella', 'Pickle', 'Rogan', 'Sabrina', 'Mitty')
+order by 1
+
+//조건에 맞는 도서 찾기
+SELECT book_id, date_format(published_date, '%Y-%m-%d') as publisehd_date
+from book
+where year(published_date) = 2021
+  and category = '인문'
+
+//반올림하기
+SELECT round(avg(daily_fee)) as average_fee
+from car_rental_company_car
+where car_type = 'suv'
+
+//조건에 맞는 사용자와 총 거래금액 조회하기
+select *
+from
+    (
+        SELECT b.user_id,
+               b.nickname,
+               sum(a.price) as total_sales
+        from used_goods_board a inner join used_goods_user b on a.writer_id = b.user_id
+        where a.status = 'done'
+        group by 1
+    ) a
+where total_sales >= 700000
+order by total_sales asc
+
+//3월에 태어난 여성 회원 목록 출력하기
+SELECT member_id, member_name, gender, date_format(date_of_birth, '%Y-%m-%d') as date_of_birth
+from member_profile
+where tlno is not null
+          and gender = 'w'
+          and month(date_of_birth) = '03'
+order by 1 asc
+
+//대여 기록이 존재하는 자동차 리스트 구하기
+SELECT a.car_id
+from car_rental_company_car a inner join car_rental_company_rental_history b on
+    a.car_id = b.car_id
+where a.car_type = '세단'
+          and month(b.start_date) = '10'
+group by 1
+order by 1 desc
