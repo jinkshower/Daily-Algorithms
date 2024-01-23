@@ -243,3 +243,10 @@ where a.car_type = '세단'
           and month(b.start_date) = '10'
 group by 1
 order by 1 desc
+
+//가격대 별 상품 개수 구하기
+SELECT floor(price / 10000) * 10000 as price_group,
+       count(1) as products
+from product
+group by 1
+order by price asc
