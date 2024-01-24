@@ -250,3 +250,29 @@ SELECT floor(price / 10000) * 10000 as price_group,
 from product
 group by 1
 order by price asc
+
+//즐겨찾기가 가장 많은 식당 정보 출력 Window
+select food_type, rest_id, rest_name, favorites
+from
+    (
+        SELECT food_type, rest_id, rest_name, favorites, rank() over(partition by food_type order by favorites desc) ranking
+        from rest_info
+    )a
+where ranking = 1
+group by food_type
+order by 1 desc
+
+//식품분류별 가장 비싼 window
+select category, price as max_price, product_name
+from
+    (
+        SELECT category,
+               price,
+               product_name,
+               rank() over(partition by category order by price desc) as ranking
+        from food_product
+        where category in ('과자', '국', '김치', '식용유')
+    ) a
+where ranking = 1
+group by category
+order by 2 desc
