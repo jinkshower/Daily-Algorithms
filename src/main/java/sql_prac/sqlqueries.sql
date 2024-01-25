@@ -276,3 +276,16 @@ from
 where ranking = 1
 group by category
 order by 2 desc
+
+//5월 식품들의 총매출 조회하기
+select a.product_id, a.product_name, sum(a.price * b.amount) as total_sales
+from food_product a inner join food_order b on a.product_id = b.product_id
+where extract(year_month from b.produce_date) = '202205'
+group by 1
+order by 3 desc, 1 asc
+
+//없어진 기록 찾기
+SELECT ao.animal_id, ao.name
+from animal_outs ao left join animal_ins ai on ao.animal_id = ai.animal_id
+where ai.animal_id is null
+order by 1
