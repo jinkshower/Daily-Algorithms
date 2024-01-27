@@ -296,3 +296,16 @@ from online_sale
 group by 1,2
 having count (product_id) > 1
 order by 1 asc, 2 desc
+
+//조건에 맞는 사용자 정보 조회하기
+SELECT
+    U.USER_ID,
+    U.NICKNAME,
+    CONCAT_WS(" ", U.CITY, U.STREET_ADDRESS1, U.STREET_ADDRESS2) AS "전체주소",
+    CONCAT_WS("-", SUBSTR(U.TLNO, 1, 3), SUBSTR(U.TLNO, 4, 4), SUBSTR(U.TLNO, 8, 4)) AS "전화번호"
+FROM USED_GOODS_BOARD B
+         INNER JOIN USED_GOODS_USER U
+                    ON B.WRITER_ID = U.USER_ID
+GROUP BY U.USER_ID
+HAVING COUNT(U.USER_ID) >= 3
+ORDER BY U.USER_ID DESC;
