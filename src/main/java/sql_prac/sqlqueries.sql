@@ -309,3 +309,12 @@ FROM USED_GOODS_BOARD B
 GROUP BY U.USER_ID
 HAVING COUNT(U.USER_ID) >= 3
 ORDER BY U.USER_ID DESC;
+
+//조건에 부합하는 중고거래 상태 조회하기
+SELECT board_id, writer_id, title, price,
+       case when status = 'sale' then '판매중'
+            when status = 'reserved' then '예약중'
+            else '거래완료' end as status
+from used_goods_board
+where date(created_date) = '2022-10-05'
+order by 1 desc
