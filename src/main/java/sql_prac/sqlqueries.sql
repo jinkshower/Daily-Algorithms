@@ -318,3 +318,17 @@ SELECT board_id, writer_id, title, price,
 from used_goods_board
 where date(created_date) = '2022-10-05'
 order by 1 desc
+
+//취소되지 않은 진료 예약 조회하기
+SELECT A.APNT_NO, P.PT_NAME, A.PT_NO, A.MCDP_CD, D.DR_NAME, A.APNT_YMD
+FROM
+    (
+        SELECT APNT_YMD, APNT_NO, PT_NO, MCDP_CD, MDDR_ID
+        FROM APPOINTMENT
+        WHERE APNT_CNCL_YN = 'N'
+          AND MCDP_CD LIKE '%CS%'
+    ) A
+        JOIN PATIENT P ON P.PT_NO = A.PT_NO
+        JOIN DOCTOR D ON D.DR_ID = A.MDDR_ID
+WHERE DATE(APNT_YMD) = 20220413
+ORDER BY A.APNT_YMD
