@@ -1,6 +1,6 @@
 package ndb;
 
-public class Fibonacci {
+public class FibonacciTopDown {
 
     // 한 번 계산된 결과를 메모이제이션(Memoization)하기 위한 배열 초기화
     public static long[] d = new long[100];
