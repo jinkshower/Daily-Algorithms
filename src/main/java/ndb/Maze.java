@@ -12,6 +12,7 @@ public class Maze {
     public static int[] dy = {0, 0, -1, 1};
 
     class Node {
+
         private int x;
         private int y;
 
