@@ -1,5 +1,7 @@
 package ndb;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class RiceCake {
@@ -39,6 +41,42 @@ public class RiceCake {
             }
         }
 
+        System.out.println(result);
+    }
+
+    // 다시 풀기
+    public static void main2(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        int result = 0;
+        int start = 0;
+        int end = (int) 1e9;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            //자른 길이 계산
+            long total = 0;
+            for (int x : list) {
+                if (x > mid) {
+                    total += x - mid;
+                }
+            }
+
+            if (total < m) {
+                end = mid - 1;
+            } else {
+                result = mid;
+                start = mid + 1;
+            }
+        }
         System.out.println(result);
     }
 }
