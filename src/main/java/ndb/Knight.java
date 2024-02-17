@@ -30,4 +30,26 @@ public class Knight {
         }
         System.out.println(count);
     }
+
+    //다시 풀기
+    public static void main2(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        int col = str.charAt(0) - 'a' + 1;
+        int row = str.charAt(1) - '0';
+
+        int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
+        int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
+
+        int count = 0;
+        for (int i = 0; i < 8; i++) {
+            int nx = row + dx[i];
+            int ny = col + dy[i];
+
+            if (nx >= 1 && nx <= 8 && ny >= 1 && ny <= 8) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
 }
