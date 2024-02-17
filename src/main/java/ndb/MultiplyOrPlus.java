@@ -28,4 +28,25 @@ public class MultiplyOrPlus {
         }
         System.out.println(result);
     }
+
+    //다시 풀기
+    public static void main2(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        int sum = str.charAt(0) - '0';
+        boolean plus = sum < 2 ? true : false;
+
+        for (int i = 1; i < str.length(); i++) {
+            int value = str.charAt(i) - '0';
+            if (plus) {
+                sum += value;
+            } else {
+                sum *= value;
+            }
+
+            plus = value < 2 ? true : false;
+        }
+        System.out.println(sum);
+    }
 }
