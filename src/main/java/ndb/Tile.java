@@ -33,5 +33,5 @@ public class Tile {
         }
 
         System.out.println(d[n]);
-    }v
+    }
 }
