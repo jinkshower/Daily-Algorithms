@@ -9,7 +9,7 @@ public class b11723 {
     static boolean[] visited;
 
     private static void dfs(int x) {
-        if (visited[x] == true) {
+        if (visited[x]) {
             return;
         } else {
             visited[x] = true;
@@ -39,7 +39,7 @@ public class b11723 {
 
         int count = 0;
         for (int i = 1; i <= n; i++) {
-            if (visited[i] == false) {
+            if (!visited[i]) {
                 dfs(i);
                 count++;
             }

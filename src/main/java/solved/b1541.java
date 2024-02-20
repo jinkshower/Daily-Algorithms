@@ -4,6 +4,36 @@ import java.util.Scanner;
 
 public class b1541 {
 
+    //다시풀기
+    public static void main2(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        //-를 기준으로 나눔
+        String[] minusS = str.split("-");
+
+        int sum = 0;
+
+        for (int i = 0; i < minusS.length; i++) {
+            // +값을 저장하기 위한 변수
+            int tmpSum = 0;
+            //각 token 마다
+            String current = minusS[i];
+            //+ 를 기준으로 나눔
+            String[] plusS = current.split("\\+");
+            //+로 나뉘어지면 모두 더함
+            for (int j = 0; j < plusS.length; j++) {
+                tmpSum += Integer.parseInt(plusS[j]);
+            }
+            if (i == 0) {
+                sum += tmpSum;
+            } else {
+                sum -= tmpSum;
+            }
+        }
+        System.out.println(sum);
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
