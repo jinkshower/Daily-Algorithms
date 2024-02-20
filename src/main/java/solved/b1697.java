@@ -6,20 +6,20 @@ import java.util.Scanner;
 
 public class b1697 {
 
-    public static int n, k;
-    public static int[] distance = new int[100001];
+    static int n, k;
+    static int[] distance = new int[100001];
+    static boolean[] visited = new boolean[100001];
 
-    public static void bfs(int n) {
+    static void bfs(int start) {
         Queue<Integer> q = new LinkedList<>();
-        q.offer(n);
-        distance[n] = 0;
+        q.offer(start);
+        visited[start] = true;
 
         while (!q.isEmpty()) {
             int current = q.poll();
 
+            int next;
             for (int i = 0; i < 3; i++) {
-                int next;
-
                 if (i == 0) {
                     next = current - 1;
                 } else if (i == 1) {
@@ -28,14 +28,20 @@ public class b1697 {
                     next = current * 2;
                 }
 
+                if (next < 0 || next > 100000) {
+                    continue;
+                }
+
                 if (next == k) {
-                    System.out.println(distance[current] + 1);
+                    distance[next] = distance[current] + 1;
+                    System.out.println(distance[next]);
                     return;
                 }
 
-                if (next >= 0 && next < distance.length && distance[next] == 0) {
-                    q.offer(next);
+                if (!visited[next]) {
+                    visited[next] = true;
                     distance[next] = distance[current] + 1;
+                    q.offer(next);
                 }
             }
         }
@@ -49,8 +55,8 @@ public class b1697 {
         if (n == k) {
             System.out.println(0);
             return;
-        } else {
-            bfs(n);
         }
+
+        bfs(n);
     }
 }
