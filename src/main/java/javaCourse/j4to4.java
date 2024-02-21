@@ -6,16 +6,6 @@ import java.util.Scanner;
 
 public class j4to4 {
 
-    static boolean isAna(Map<Character, Integer> map, String str2) {
-        for (char c : str2.toCharArray()) {
-            if (!map.containsKey(c) || map.get(c) == 0) {
-                return false;
-            }
-            map.put(c, map.get(c) - 1);
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
@@ -27,13 +17,18 @@ public class j4to4 {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
+        Map<Character, Integer> map2 = new HashMap<>();
+        for (char c : str2.toCharArray()) {
+            map2.put(c, map2.getOrDefault(c, 0) + 1);
+        }
+
         int lt = 0;
         int count = 0;
         for (int rt = str2.length() - 1; rt < str.length(); rt++) {
             char c = str.charAt(rt);
             map.put(c, map.getOrDefault(c, 0) + 1);
 
-            if (isAna(new HashMap<>(map), str2)) {
+            if (map.equals(map2)) {
                 count++;
             }
 
