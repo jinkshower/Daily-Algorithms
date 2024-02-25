@@ -1,11 +1,10 @@
-package javaCourse;
+package javaCourse.j3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class j3to2 {
+public class j3to1 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -23,8 +22,6 @@ public class j3to2 {
             arrB[i] = sc.nextInt();
         }
 
-        Arrays.sort(arrA);
-        Arrays.sort(arrB);
         List<Integer> answer = new ArrayList<>();
 
         int p1 = 0;
@@ -32,13 +29,17 @@ public class j3to2 {
 
         while (p1 < n && p2 < m) {
             if (arrA[p1] < arrB[p2]) {
-                p1++;
-            } else if (arrA[p1] > arrB[p2]) {
-                p2++;
-            } else {
                 answer.add(arrA[p1++]);
-                p2++;
+            } else {
+                answer.add(arrB[p2++]);
             }
+        }
+
+        while (p1 < n) {
+            answer.add(arrA[p1++]);
+        }
+        while (p2 < m) {
+            answer.add(arrB[p2++]);
         }
 
         for (int x : answer) {

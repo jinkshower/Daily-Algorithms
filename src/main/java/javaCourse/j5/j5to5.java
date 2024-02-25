@@ -1,4 +1,4 @@
-package javaCourse;
+package javaCourse.j5;
 
 import java.util.Scanner;
 import java.util.Stack;

@@ -1,11 +1,11 @@
-package javaCourse;
+package javaCourse.j9;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class j9to2 {
+public class j9to3 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -15,39 +15,41 @@ public class j9to2 {
         for (int i = 0; i < n; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
-            list.add(new Meeting(a, b));
+            list.add(new Meeting(a, 's'));
+            list.add(new Meeting(b, 'e'));
         }
 
         Collections.sort(list);
 
-        Meeting prev = list.get(0);
-        int cnt = 1;
-        for (int i = 1; i < n; i++) {
-            Meeting cur = list.get(i);
-            if (cur.start >= prev.end) {
+        int answer = Integer.MIN_VALUE;
+        int cnt = 0;
+        for (Meeting m : list) {
+            if (m.state == 's') {
                 cnt++;
-                prev = cur;
+            } else {
+                cnt--;
             }
+            answer = Math.max(answer, cnt);
         }
-        System.out.println(cnt);
+        System.out.println(answer);
     }
 
     static class Meeting implements Comparable<Meeting> {
 
-        public int start;
-        public int end;
+        public int time;
+        public char state;
 
-        Meeting(int start, int end) {
-            this.start = start;
-            this.end = end;
+        Meeting(int time, char state) {
+            this.time = time;
+            this.state = state;
         }
 
         @Override
         public int compareTo(Meeting o) {
-            if (this.end == o.end) {
-                return this.start - o.start;
+            if (this.time == o.time) {
+                return this.state - o.state;
             } else {
-                return this.end - o.end;
+                return this.time - o.time;
             }
         }
     }

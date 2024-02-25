@@ -1,4 +1,4 @@
-package javaCourse;
+package javaCourse.j6;
 
 import java.util.Scanner;
 

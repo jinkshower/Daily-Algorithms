@@ -1,4 +1,4 @@
-package javaCourse;
+package javaCourse.j10;
 
 import java.util.ArrayList;
 import java.util.Collections;

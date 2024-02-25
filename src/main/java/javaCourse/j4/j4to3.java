@@ -1,4 +1,4 @@
-package javaCourse;
+package javaCourse.j4;
 
 import java.util.ArrayList;
 import java.util.HashMap;
