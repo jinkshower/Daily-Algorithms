@@ -2,7 +2,7 @@ package javaCourse2.simulation1강;
 
 public class j1to1 {
 
-    //내풀이
+    //내풀이 09:47-10:06
     public char[] solution(int n, int[][] ladder) {
         char[] answer = new char[n];
         char[] start = new char[n];
