@@ -44,7 +44,7 @@ public class j3to2 {
     }
 
     //다시 풀기
-    public String solution(String s) {
+    public String solution3(String s) {
         String answer = "";
         Stack<String> stack = new Stack<>();
         for (char c : s.toCharArray()) {
