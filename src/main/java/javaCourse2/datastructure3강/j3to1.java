@@ -51,4 +51,26 @@ public class j3to1 {
         }
         return answer;
     }
+
+    //다시 풀기
+    public int solution3(int[] nums) {
+        int answer = 0;
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+        }
+
+        for (int x : set) {
+            if (set.contains(x - 1)) {
+                continue;
+            }
+            int cnt = 0;
+            while (set.contains(x)) {
+                x++;
+                cnt++;
+            }
+            answer = Math.max(answer, cnt);
+        }
+        return answer;
+    }
 }
