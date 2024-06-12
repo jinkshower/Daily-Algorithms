@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SetTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-11-03T01:54:02" hostname="DESKTOP-0FS2M5P" time="0.089">
+  <properties/>
+  <testcase name="[1] 1, true" classname="SetTest" time="0.06"/>
+  <testcase name="[2] 2, true" classname="SetTest" time="0.002"/>
+  <testcase name="[3] 3, true" classname="SetTest" time="0.001"/>
+  <testcase name="[4] 4, false" classname="SetTest" time="0.001"/>
+  <testcase name="[5] 5, false" classname="SetTest" time="0.001"/>
+  <testcase name="[1] 1" classname="SetTest" time="0.001"/>
+  <testcase name="[2] 2" classname="SetTest" time="0.001"/>
+  <testcase name="[3] 3" classname="SetTest" time="0.001"/>
+  <testcase name="sizeTest()" classname="SetTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
