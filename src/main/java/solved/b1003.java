@@ -1,6 +1,9 @@
 package solved;
 
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class b1003 {
 
@@ -20,6 +23,7 @@ public class b1003 {
             d[i][1] = d[i - 1][1] + d[i - 2][1];
         }
         System.out.println(d[n][0] + " " + d[n][1]);
+        List<Integer> list = IntStream.rangeClosed(0, n).boxed().collect(Collectors.toList());
     }
 
     public static void main(String[] args) {
@@ -29,4 +33,5 @@ public class b1003 {
             solve(sc.nextInt());
         }
     }
+    
 }
