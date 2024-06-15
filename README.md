@@ -5,3 +5,4 @@
 ## 기록
 
 [LeetCode1774](https://github.com/jinkshower/Daily-Algorithms/commit/f2337a660484d4ec987ec5c0eeaa6f18455fc610)
+[LeetCode402](https://github.com/jinkshower/Daily-Algorithms/commit/964b911598b3a03b7ce94cea5b3010e0d707a815)
