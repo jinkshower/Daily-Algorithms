@@ -16,9 +16,9 @@ public class jto1 {
 
         while (true) {
             Stock poll = pq.poll();
-            if ()
+//            if ()
         }
-        return answer;
+//        return answer;
     }
 
     class Stock implements Comparable<Stock> {
@@ -38,6 +38,7 @@ public class jto1 {
     }
 
     class Solution {
+
         public long solution(int money, long[][] stocks) {
             long answer = 0;
             PriorityQueue<Stock> pq = new PriorityQueue<>();
@@ -57,10 +58,11 @@ public class jto1 {
         }
 
         class Stock implements Comparable<Stock> {
+
             public long worth;
             public long price;
 
-            Stock (long worth, long price) {
+            Stock(long worth, long price) {
                 this.worth = worth;
                 this.price = price;
             }
@@ -103,13 +105,13 @@ public class jto1 {
         return answer;
     }
 
-    int biggest = -1;
-        for (int i = 0; i < s.length()- 2; i++) {
-        if (s.charAt(i) == s.charAt(i + 1) && s.charAt(i + 1) == s.charAt(i + 2)) {
-            biggest = Math.max(biggest, Integer.parseInt(s.substring(i, i + 3)));
-        }
-    }
-        return biggest;
+//    int biggest = -1;
+//        for (int i = 0; i < s.length()- 2; i++) {
+//        if (s.charAt(i) == s.charAt(i + 1) && s.charAt(i + 1) == s.charAt(i + 2)) {
+//            biggest = Math.max(biggest, Integer.parseInt(s.substring(i, i + 3)));
+//        }
+//    }
+//        return biggest;
 
     public int solution(int[] levels) {
         int len = levels.length;
