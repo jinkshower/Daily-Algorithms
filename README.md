@@ -11,3 +11,7 @@
 [하노이의 탑](https://github.com/jinkshower/Daily-Algorithms/commit/a7c171e64b9505535accbcecc46b33acf0a55201)
 
 [버블정렬](https://github.com/jinkshower/Daily-Algorithms/commit/72ff751327e56eb9bd8d33603b21b81f2dc2ae12)
+
+[선택정렬](https://github.com/jinkshower/Daily-Algorithms/commit/896c60585d44cba4853b906647f491423a35483a)
+
+[삽입정렬](https://github.com/jinkshower/Daily-Algorithms/commit/0d7f1c25ba91d5bde46473435418efe7e74d6977)
