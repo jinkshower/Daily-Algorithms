@@ -17,3 +17,5 @@
 [삽입정렬](https://github.com/jinkshower/Daily-Algorithms/commit/0d7f1c25ba91d5bde46473435418efe7e74d6977)
 
 [퀵정렬](https://github.com/jinkshower/Daily-Algorithms/commit/a0f753b6d5869d6601cd99c02f35a96ca0db45d8)
+
+[LeetCode3169](https://github.com/jinkshower/Daily-Algorithms/commit/5c6396f34b4d4f40afc76483c1c83cab2dad747b)
