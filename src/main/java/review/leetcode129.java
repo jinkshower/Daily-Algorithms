@@ -1,8 +1,5 @@
 package review;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class leetcode129 {
 
     class TreeNode {
@@ -25,27 +22,21 @@ public class leetcode129 {
         }
     }
 
-    private List<Integer> list = new ArrayList<>();
-    private int answer = 0;
-
     public int sumNumbers(TreeNode root) {
         //트리를 깊이 우선 탐색하라.
-        dfs(root, 0);
-        return answer;
+        return find(root, 0);
     }
 
-    private void dfs(TreeNode cur, int sum) {
-        if (cur.left == null && cur.right == null) {
-            sum = sum * 10 + cur.val;
-            answer += sum;
-            return;
+    private int find(TreeNode node, int sum) {
+        if (node == null) {
+            return 0;
         }
-        sum = sum * 10 + cur.val;
-        if (cur.left != null) {
-            dfs(cur.left, sum);
+
+        sum = sum * 10 + node.val;
+        if (node.left == null && node.right == null) {
+            return sum;
         }
-        if (cur.right != null) {
-            dfs(cur.right, sum);
-        }
+
+        return find(node.left, sum) + find(node.right, sum);
     }
 }
