@@ -23,3 +23,5 @@
 [LeetCode129](https://github.com/jinkshower/Daily-Algorithms/commit/6388a82e284b845b01e61e7c9db60a46c51c98d9)
 
 [LeetCode64](https://github.com/jinkshower/Daily-Algorithms/commit/3bfdab0142fd8d32111100560ec333de2a424a30)
+
+[프로그래머스 입국심사](https://github.com/jinkshower/Daily-Algorithms/commit/c7e5a0326279e6e416a23810c4b34ad410eb53b8)
