@@ -27,3 +27,5 @@
 [프로그래머스 입국심사](https://github.com/jinkshower/Daily-Algorithms/commit/c7e5a0326279e6e416a23810c4b34ad410eb53b8)
 
 [LeetCode1409](https://github.com/jinkshower/Daily-Algorithms/commit/e0cd079a4e7a50ded9aef8733a16ed300ba5a822)
+
+[LeetCode1441](https://github.com/jinkshower/Daily-Algorithms/commit/990f9b53676382c4aadf370893a3b684a50896d1)
