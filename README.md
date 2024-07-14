@@ -31,3 +31,5 @@
 [LeetCode1409](https://github.com/jinkshower/Daily-Algorithms/commit/e0cd079a4e7a50ded9aef8733a16ed300ba5a822)
 
 [LeetCode1441](https://github.com/jinkshower/Daily-Algorithms/commit/990f9b53676382c4aadf370893a3b684a50896d1)
+
+[LeetCode113](https://github.com/jinkshower/Daily-Algorithms/commit/b4cc6bfdeec10a3952c23dbd2a2030502672bde5)
