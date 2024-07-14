@@ -32,4 +32,4 @@
 
 [LeetCode1441](https://github.com/jinkshower/Daily-Algorithms/commit/990f9b53676382c4aadf370893a3b684a50896d1)
 
-[LeetCode113](https://github.com/jinkshower/Daily-Algorithms/commit/b4cc6bfdeec10a3952c23dbd2a2030502672bde5)
+[LeetCode113 Path Sum 2](https://github.com/jinkshower/Daily-Algorithms/commit/b4cc6bfdeec10a3952c23dbd2a2030502672bde5)
