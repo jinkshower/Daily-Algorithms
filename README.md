@@ -37,3 +37,5 @@
 [LeetCode1503 Last Moment Before All Ants Fall Out of a Plank](https://github.com/jinkshower/Daily-Algorithms/commit/2a96a9dd6caa1874d4f505a1f1671aa2f5d42839)
 
 [LeetCode345 Reverse Vowels of a String](https://github.com/jinkshower/Daily-Algorithms/commit/d4fc9110864e5b1f18c8c8b6a229e2099428e81e)
+
+[LeetCode1535 Find the Winner of an Array Game](https://github.com/jinkshower/Daily-Algorithms/commit/56e2420b437017755c396e4d0128ffb3b8b61bca)
