@@ -39,3 +39,5 @@
 [LeetCode345 Reverse Vowels of a String](https://github.com/jinkshower/Daily-Algorithms/commit/d4fc9110864e5b1f18c8c8b6a229e2099428e81e)
 
 [LeetCode1535 Find the Winner of an Array Game](https://github.com/jinkshower/Daily-Algorithms/commit/56e2420b437017755c396e4d0128ffb3b8b61bca)
+
+[LeetCode1545 Find Kth Bit in Nth Binary String](https://github.com/jinkshower/Daily-Algorithms/commit/76fb9fd5e99a1339aac80602bb589cdc40d7e4ef)
