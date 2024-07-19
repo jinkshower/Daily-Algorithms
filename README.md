@@ -41,3 +41,5 @@
 [LeetCode1535 Find the Winner of an Array Game](https://github.com/jinkshower/Daily-Algorithms/commit/56e2420b437017755c396e4d0128ffb3b8b61bca)
 
 [LeetCode1545 Find Kth Bit in Nth Binary String](https://github.com/jinkshower/Daily-Algorithms/commit/76fb9fd5e99a1339aac80602bb589cdc40d7e4ef)
+
+[LeetCode283. Move Zeroes](https://github.com/jinkshower/Daily-Algorithms/commit/2c946378cf3942c7cce0fff43a4670ff91f65bc6)
