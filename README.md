@@ -43,3 +43,5 @@
 [LeetCode1545 Find Kth Bit in Nth Binary String](https://github.com/jinkshower/Daily-Algorithms/commit/76fb9fd5e99a1339aac80602bb589cdc40d7e4ef)
 
 [LeetCode283. Move Zeroes](https://github.com/jinkshower/Daily-Algorithms/commit/2c946378cf3942c7cce0fff43a4670ff91f65bc6)
+
+[LeetCode724. Find Pivot Index](https://github.com/jinkshower/Daily-Algorithms/commit/0f4eab4e8f234366a7303e68000fbf3bcd70371d)
