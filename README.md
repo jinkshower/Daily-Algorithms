@@ -45,3 +45,8 @@
 [LeetCode283. Move Zeroes](https://github.com/jinkshower/Daily-Algorithms/commit/2c946378cf3942c7cce0fff43a4670ff91f65bc6)
 
 [LeetCode724. Find Pivot Index](https://github.com/jinkshower/Daily-Algorithms/commit/0f4eab4e8f234366a7303e68000fbf3bcd70371d)
+
+[LeetCode1861. Rotating the Box](https://github.com/jinkshower/Daily-Algorithms/commit/0f7e954997b738153929e5c878e419b42abc4e2e)
+
+[LeetCode1599. Maximum Profit of Operating a Centennial Wheel](https://github.com/jinkshower/Daily-Algorithms/commit/fc704c9348e829bee88b732b3ac5f4267e14429e)
+
