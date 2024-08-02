@@ -50,3 +50,4 @@
 
 [LeetCode1599. Maximum Profit of Operating a Centennial Wheel](https://github.com/jinkshower/Daily-Algorithms/commit/fc704c9348e829bee88b732b3ac5f4267e14429e)
 
+[LeetCode2352. Equal Row and Column Pairs](https://github.com/jinkshower/Daily-Algorithms/commit/50836fb595e9c77b80370fb68392eb68633827f3)
