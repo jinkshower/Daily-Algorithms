@@ -51,3 +51,7 @@
 [LeetCode1599. Maximum Profit of Operating a Centennial Wheel](https://github.com/jinkshower/Daily-Algorithms/commit/fc704c9348e829bee88b732b3ac5f4267e14429e)
 
 [LeetCode2352. Equal Row and Column Pairs](https://github.com/jinkshower/Daily-Algorithms/commit/50836fb595e9c77b80370fb68392eb68633827f3)
+
+[LeetCode1604. Alert Using Same Key-Card Three or More Times in a One Hour Period](https://github.com/jinkshower/Daily-Algorithms/commit/26f727bf8f56e03940284e6f142e5fb7f9afeef2) 
+
+[LeetCode1781. Sum of Beauty of All Substrings](https://github.com/jinkshower/Daily-Algorithms/commit/dc34867080878aea098a99857e31a6e35943305b)
