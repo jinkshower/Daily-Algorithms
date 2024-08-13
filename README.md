@@ -52,8 +52,12 @@
 
 [LeetCode2352. Equal Row and Column Pairs](https://github.com/jinkshower/Daily-Algorithms/commit/50836fb595e9c77b80370fb68392eb68633827f3)
 
-[LeetCode1604. Alert Using Same Key-Card Three or More Times in a One Hour Period](https://github.com/jinkshower/Daily-Algorithms/commit/26f727bf8f56e03940284e6f142e5fb7f9afeef2) 
+[LeetCode1604. Alert Using Same Key-Card Three or More Times in a One Hour Period](https://github.com/jinkshower/Daily-Algorithms/commit/26f727bf8f56e03940284e6f142e5fb7f9afeef2) NR
 
-[LeetCode1781. Sum of Beauty of All Substrings](https://github.com/jinkshower/Daily-Algorithms/commit/dc34867080878aea098a99857e31a6e35943305b)
+[LeetCode1781. Sum of Beauty of All Substrings](https://github.com/jinkshower/Daily-Algorithms/commit/dc34867080878aea098a99857e31a6e35943305b) NR
 
-[LeetCode394. Decode String](https://github.com/jinkshower/Daily-Algorithms/commit/1200834594656a6e91fc870f735f669eb3f27020)
+[LeetCode394. Decode String](https://github.com/jinkshower/Daily-Algorithms/commit/1200834594656a6e91fc870f735f669eb3f27020) NR
+
+[LeetCode1801. Number of Orders in the Backlog](https://github.com/jinkshower/Daily-Algorithms/commit/8888450a38e044607c3e2108019b34b9e6e101be)
+
+[LeetCode1657. Determine if Two Strings Are Close](https://github.com/jinkshower/Daily-Algorithms/commit/d2e178db9cb600dcc95a14b442379801e50320ff) NR
