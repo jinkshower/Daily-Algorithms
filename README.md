@@ -55,3 +55,5 @@
 [LeetCode1604. Alert Using Same Key-Card Three or More Times in a One Hour Period](https://github.com/jinkshower/Daily-Algorithms/commit/26f727bf8f56e03940284e6f142e5fb7f9afeef2) 
 
 [LeetCode1781. Sum of Beauty of All Substrings](https://github.com/jinkshower/Daily-Algorithms/commit/dc34867080878aea098a99857e31a6e35943305b)
+
+[LeetCode394. Decode String](https://github.com/jinkshower/Daily-Algorithms/commit/1200834594656a6e91fc870f735f669eb3f27020)
