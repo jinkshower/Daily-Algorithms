@@ -61,3 +61,5 @@
 [LeetCode1801. Number of Orders in the Backlog](https://github.com/jinkshower/Daily-Algorithms/commit/8888450a38e044607c3e2108019b34b9e6e101be)
 
 [LeetCode1657. Determine if Two Strings Are Close](https://github.com/jinkshower/Daily-Algorithms/commit/d2e178db9cb600dcc95a14b442379801e50320ff) NR
+
+[LeetCode649. Dota2 Senate](https://github.com/jinkshower/Daily-Algorithms/commit/9b7e81520e38b0e5ea827029c7d570d86b644dcf)
