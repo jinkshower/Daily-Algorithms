@@ -67,3 +67,5 @@
 [LeetCode238. Product of Array Except Self](https://github.com/jinkshower/Daily-Algorithms/commit/bae6012c2b3a54038d960bdc4703d18bf2d58349)
 
 [LeetCode443. String Compression](https://github.com/jinkshower/Daily-Algorithms/commit/81b13cb0d179d28e48e0f5617686c9c0440c7c9c)
+
+[LeetCode392. Is Subsequence](https://github.com/jinkshower/Daily-Algorithms/commit/1d7d8e44efa78f064843b7ab7aaa1d2b60f75de5)
