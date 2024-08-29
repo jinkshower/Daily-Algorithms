@@ -2,6 +2,12 @@
 
 알고리즘을 꾸준히 풀고 **개인적인 풀이과정**을 정리하여 더 나은 문제 해결력을 기르기 위해 정리하는 저장소입니다. 
 
+## 예시 
+
+![image](https://github.com/user-attachments/assets/92b8b5aa-f450-47a0-b51c-2b26588cc25a)
+
+알고리즘을 풀고 나서 바로 잊어버리는 게 아니라 문제를 해결하기 까지의 사고과정을 정리, 아웃풋을 계속 남겨 머리 속 디스크에 저장하고 있습니다.
+
 ## 기록
 
 [LeetCode1774](https://github.com/jinkshower/Daily-Algorithms/commit/f2337a660484d4ec987ec5c0eeaa6f18455fc610)  
@@ -71,3 +77,5 @@
 [LeetCode392. Is Subsequence](https://github.com/jinkshower/Daily-Algorithms/commit/1d7d8e44efa78f064843b7ab7aaa1d2b60f75de5)
 
 [LeetCode11. Container With Most Water](https://github.com/jinkshower/Daily-Algorithms/commit/d82b807162be3e861ea59a5d4af378b6680d7ff5)
+
+[LeetCode1679. Max Number of K-Sum Pairs](https://github.com/jinkshower/Daily-Algorithms/commit/a64c242497faf9a490106dd759924f7287cc4f40)
