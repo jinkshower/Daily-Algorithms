@@ -81,3 +81,5 @@
 [LeetCode1679. Max Number of K-Sum Pairs](https://github.com/jinkshower/Daily-Algorithms/commit/a64c242497faf9a490106dd759924f7287cc4f40)
 
 [LeetCode1004. Max Consecutive Ones III](https://github.com/jinkshower/Daily-Algorithms/commit/2389ae28fc8b2657212e6d7b1ff8576e7a39d09c)
+
+[LeetCode1493. Longest Subarray of 1's After Deleting One Element](https://github.com/jinkshower/Daily-Algorithms/commit/05fa9a43ce85a0ea256dc2dcd865d00863afb5b2)
