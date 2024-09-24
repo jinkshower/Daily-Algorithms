@@ -97,3 +97,5 @@
 [LeetCode122. Best Time to Buy and Sell Stock II](https://github.com/jinkshower/Daily-Algorithms/commit/943dee9ec8ebc3d38d7f054b801e762169b7ae71)
 
 [LeetCode72. Edit Distance](https://github.com/jinkshower/Daily-Algorithms/commit/7f07493eb4c03450a705a92780004436aa0b9cea)
+
+[LeetCode2542. Maximum Subsequence Score](https://github.com/jinkshower/Daily-Algorithms/commit/406724c19f66f3644f77c458f9c50ccd01ecf6c5)
