@@ -2,8 +2,7 @@ package review;
 
 import java.util.Scanner;
 
-public class baek14501dp {
-
+public class baek14501bottomup {
     static int n;
     static int[] dp;
 
@@ -18,24 +17,15 @@ public class baek14501dp {
             graph[i][1] = scanner.nextInt(); // 보상
         }
         dp = new int[n + 1];
+
+        for (int i = n - 1; i >= 0; i--) {
+            if (i + graph[i][0] > n) {
+                dp[i] = dp[i + 1];
+                continue;
+            }
+            dp[i] = Math.max(dp[i + graph[i][0]] + graph[i][1], dp[i + 1]);
+        }
+
         System.out.println(dp[0]);
-    }
-
-    private static int recur(int depth, int[][] graph) {
-
-        if (depth > n) {
-            return Integer.MIN_VALUE;
-        }
-
-        if (depth == n) {
-            return 0;
-        }
-
-        if (dp[depth] != 0) {
-            return dp[depth];
-        }
-
-        dp[depth] = Math.max(recur(depth + graph[depth][0], graph) + graph[depth][1], recur(depth + 1, graph));
-        return dp[depth];
     }
 }
