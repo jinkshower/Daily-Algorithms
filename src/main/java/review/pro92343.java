@@ -43,9 +43,13 @@ public class pro92343 {
         if (wolf >= sheep) {
             return;
         }
-
         // 최대 양 수 갱신
         maxSheep = Math.max(maxSheep, sheep);
+
+        //그래프 탐색 방법이 아예 다름
+        //일반적인 백트래킹일 경우 한직선으로 가고 멈춰버림. 이 문제는 경로를 보존해놔야함.
+        //[0] -> nextnodes[1,8]이 되고 1을 탐색할 때 nextNodes에 [8]이 남아있음. 즉 sheep을 보존하면서 늑대가 같은 수인 가지만
+        //return하는것. sheep을 보존하는 경로를 보존해놓고 가능한 경로를 모두 탐색하는 것
 
         // 현재 경로에서 이동 가능한 모든 자식 노드 탐색
         List<Integer> nextNodes = new ArrayList<>(path);
