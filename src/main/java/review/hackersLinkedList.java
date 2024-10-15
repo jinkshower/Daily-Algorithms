@@ -166,4 +166,39 @@ public class hackersLinkedList {
 
         return llist;
     }
+
+    static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        int len1 = getLength(head1); //각 길이를 구하고
+        int len2 = getLength(head2);
+
+        if (len1 > len2) { // 길이가 긴건 긴만큼 이동
+            head1 = move(head1, len1 - len2);
+        } else if (len1 < len2) {
+            head2 = move(head2, len2 - len1);
+        }
+
+        while (head1 != head2) { // 같은 노드를 찾을 때까지 이동
+            head1 = head1.next;
+            head2 = head2.next;
+        }
+
+        return head1.data;
+    }
+
+    static int getLength(SinglyLinkedListNode head) {
+        int length = 0;
+        while (head != null) {
+            length++;
+            head = head.next;
+        }
+        return length;
+    }
+
+    static SinglyLinkedListNode move(SinglyLinkedListNode head, int length) {
+        while (length > 0 && head != null) {
+            head = head.next;
+            length--;
+        }
+        return head;
+    }
 }
