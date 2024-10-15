@@ -201,4 +201,38 @@ public class hackersLinkedList {
         }
         return head;
     }
+
+    public static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode llist, int data) {
+        // Write your code here
+        DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);
+        if (llist == null) {
+            return newNode;
+        }
+        //가장 작은 값이면
+        if (data < llist.data) {
+            newNode.next = llist;
+            llist.prev = newNode;
+            return newNode;
+        }
+
+        DoublyLinkedListNode current = llist;
+        //move untill insertion node
+        while (current.next != null && current.next.data < data) {
+            current = current.next;
+        }
+        // 끝 값이면
+        if (current.next == null) {
+            current.next = newNode;
+            newNode.prev = current;
+            //일반적인 경우
+        } else {
+            newNode.next = current.next;
+            newNode.prev = current;
+
+            current.next.prev = newNode;
+            current.next = newNode;
+        }
+
+        return llist;
+    }
 }
