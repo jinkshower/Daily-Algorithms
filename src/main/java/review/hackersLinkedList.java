@@ -76,4 +76,23 @@ public class hackersLinkedList {
         current.next = current.next.next;
         return llist;
     }
+
+    public static void reversePrint(SinglyLinkedListNode llist) {
+        // Write your code here
+        SinglyLinkedListNode newHead = null;
+
+        while (llist != null) {
+            SinglyLinkedListNode next = llist.next;
+            llist.next = newHead;
+
+            newHead = llist;
+            llist = next;
+        }
+
+        while (newHead != null) {
+            System.out.println(newHead.data);
+
+            newHead = newHead.next;
+        }
+    }
 }
