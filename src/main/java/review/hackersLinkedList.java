@@ -153,4 +153,17 @@ public class hackersLinkedList {
 
         return llist.data;
     }
+
+    public static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode llist) {
+        // Write your code here
+        SinglyLinkedListNode current = llist;
+        while (current != null) {
+            while (current.next != null && current.data == current.next.data) {
+                current.next = current.next.next;
+            }
+            current = current.next;
+        }
+
+        return llist;
+    }
 }
