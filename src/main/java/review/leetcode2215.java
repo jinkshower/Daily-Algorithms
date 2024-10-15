@@ -1,64 +1,73 @@
 package review;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class leetcode2215 {
 
-    public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
-        //brute force
-        List<List<Integer>> result = new ArrayList<>();
-        List<Integer> list1 = Arrays.stream(nums1).boxed().toList();
-        List<Integer> list2 = Arrays.stream(nums2).boxed().toList();
+    public static void main(String[] args) {
+        List<Photo> photos = new ArrayList<>();
+        photos.add(new Photo("A", "jpg",
+                LocalDateTime.parse("2021-07-01 00:00:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), 1));
+        photos.add(new Photo("B", "jpg",
+                LocalDateTime.parse("2021-07-01 00:00:01", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), 2));
+        photos.add(new Photo("C", "jpg",
+                LocalDateTime.parse("2021-07-01 00:00:02", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), 3));
 
-        Set<Integer> distinct1 = new HashSet<>();
-        Set<Integer> distinct2 = new HashSet<>();
-        for (int i = 0; i < nums1.length; i++) {
-            if (!list2.contains(nums1[i])) {
-                distinct1.add(nums1[i]);
+        Map<String, List<Photo>> grouped = photos.stream().collect(Collectors.groupingBy(p -> p.city));
+
+        for (List<Photo> value : grouped.values()) {
+            value.sort(Photo::compareTo);
+            int size = value.size();
+            int digits = String.valueOf(size).length();
+            String format = "%0" + digits + "d";
+
+            for (int i = 0; i < size; i++) {
+                Photo photo = value.get(i);
+                photo.newName = photo.city + String.format(format, i + 1) + "." + photo.extension;
             }
         }
 
-        for (int i = 0; i < nums2.length; i++) {
-            if (!list1.contains(nums2[i])) {
-                distinct2.add(nums2[i]);
-            }
+        StringBuilder answer = new StringBuilder();
+        for (Photo photo : photos) {
+            answer.append(photo.newName).append("\n");
         }
-        result.add(new ArrayList<>(distinct1));
-        result.add(new ArrayList<>(distinct2));
-        return result;
-
+        System.out.println(answer.toString());
+        answer.deleteCharAt(answer.length() - 1);
     }
 
-    public List<List<Integer>> findDifference2(int[] nums1, int[] nums2) {
+    static class Photo implements Comparable<Photo> {
+        String city;
+        String extension;
+        String newName;
+        LocalDateTime shotAt;
+        int originalIndex;
 
-        Set<Integer> set1 = new HashSet<>();
-        Set<Integer> set2 = new HashSet<>();
-
-        for (int i : nums1) {
-            set1.add(i);
+        public Photo(String city, String extension, LocalDateTime shotAt, int originalIndex) {
+            this.city = city;
+            this.extension = extension;
+            this.shotAt = shotAt;
+            this.originalIndex = originalIndex;
         }
 
-        for (int i : nums2) {
-            set2.add(i);
+        @Override
+        public int compareTo(Photo o) {
+            return this.shotAt.compareTo(o.shotAt);
         }
 
-        Set<Integer> tmp1 = new HashSet<>(set1);
-        Set<Integer> tmp2 = new HashSet<>(set2);
-        for (int i : set1) {
-            if (set2.contains(i)) {
-                tmp1.remove(i);
-                tmp2.remove(i);
-            }
+        @Override
+        public String toString() {
+            return "Photo{" +
+                    "city='" + city + '\'' +
+                    ", extension='" + extension + '\'' +
+                    ", newName='" + newName + '\'' +
+                    ", shotAt=" + shotAt +
+                    ", originalIndex=" + originalIndex +
+                    '}';
         }
-        // System.out.println(tmp1);
-        // System.out.println(tmp2);
-        List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<>(tmp1));
-        result.add(new ArrayList<>(tmp2));
-        return result;
     }
 }
