@@ -17,4 +17,16 @@ public class hackersLinkedList {
 
         return head;
     }
+
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+
+        if (llist == null) {
+            llist = newNode;
+            return llist;
+        }
+
+        newNode.next = llist;
+        return newNode;
+    }
 }
