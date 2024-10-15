@@ -107,4 +107,50 @@ public class hackersLinkedList {
 
         return head1 == head2;
     }
+
+    static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        SinglyLinkedListNode newHead = null;
+        SinglyLinkedListNode current = null;
+        while (head1 != null && head2 != null) {
+            SinglyLinkedListNode newNode;
+            if (head1.data < head2.data) {
+                newNode = new SinglyLinkedListNode(head1.data);
+                head1 = head1.next;
+            } else {
+                newNode = new SinglyLinkedListNode(head2.data);
+                head2 = head2.next;
+            }
+
+            if (newHead == null) {
+                newHead = newNode;
+                current = newHead;
+            } else {
+                current.next = newNode;
+                current = current.next;
+            }
+        }
+
+        if (head1 != null) { //둘다 sorted라고 명시되어 있음
+            current.next = head1;
+        } else if (head2 != null) {
+            current.next = head2;
+        }
+
+        return newHead;
+    }
+
+    public static int getNode(SinglyLinkedListNode llist, int positionFromTail) {
+        // Write your code here
+        SinglyLinkedListNode offset = llist;
+        for (int i = 0; i < positionFromTail; i++) {
+            offset = offset.next;
+        }
+
+        while (offset.next != null) {
+            offset = offset.next;
+            llist = llist.next;
+        }
+
+        return llist.data;
+    }
 }
