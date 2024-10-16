@@ -128,4 +128,24 @@ public class hackersTree {
         // 4. 변경된 루트를 반환
         return root;
     }
+
+    public static Node lca(Node root, int v1, int v2) {
+        // 현재 루트가 null이면 공통 조상이 없으므로 null 반환
+        if (root == null) {
+            return null;
+        }
+
+        // 현재 노드가 v1과 v2보다 큰 경우, 공통 조상은 왼쪽 서브트리에 있다
+        if (root.data > v1 && root.data > v2) {
+            return lca(root.left, v1, v2);
+        }
+
+        // 현재 노드가 v1과 v2보다 작은 경우, 공통 조상은 오른쪽 서브트리에 있다
+        if (root.data < v1 && root.data < v2) {
+            return lca(root.right, v1, v2);
+        }
+
+        // v1과 v2가 현재 노드를 기준으로 양쪽에 있다면 현재 노드가 공통 조상
+        return root;
+    }
 }
