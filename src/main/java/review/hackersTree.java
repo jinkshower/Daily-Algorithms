@@ -209,4 +209,39 @@ public class hackersTree {
         }
         return -1;
     }
+
+    public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
+        // Write your code here
+        int sum1 = 0;
+        int sum2 = 0;
+        int sum3 = 0;
+        for (int i : h1) {
+            sum1 += i;
+        }
+        for (int i : h2) {
+            sum2 += i;
+        }
+        for (int i : h3) {
+            sum3 += i;
+        }
+
+        int i = 0, j = 0, k = 0;
+
+        while (i < h1.size() && j < h2.size() && k < h3.size()) {
+
+            if (sum1 == sum2 && sum2 == sum3) {
+                return sum1;
+            }
+
+            if (sum1 >= sum2 && sum1 >= sum3) {
+                sum1 -= h1.get(i++);
+            } else if (sum2 >= sum1 && sum2 >= sum3) {
+                sum2 -= h2.get(j++);
+            } else if (sum3 >= sum1 && sum3 >= sum2) {
+                sum3 -= h3.get(k++);
+            }
+        }
+
+        return 0;
+    }
 }
