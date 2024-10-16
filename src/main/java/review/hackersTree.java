@@ -1,5 +1,10 @@
 package review;
 
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.TreeMap;
+
 public class hackersTree {
     public static void preOrder(Node root) {
         System.out.print(root.data + " ");
@@ -41,5 +46,48 @@ public class hackersTree {
         int rightCount = height(root.right);
 
         return Math.max(leftCount, rightCount) + 1;
+    }
+
+    public static void topView(Node root) {
+        if (root == null) {
+            return;
+        }
+        //for print, sort values by key
+        Map<Integer, Integer> topViews = new TreeMap<>();
+
+        Queue<Pair> queue = new LinkedList<>();
+        queue.offer(new Pair(root, 0));
+
+        while (!queue.isEmpty()) {
+            Pair current = queue.poll();
+            Node currentNode = current.node;
+            int distance = current.distance;
+
+            if (!topViews.containsKey(distance)) {
+                topViews.put(distance, currentNode.data);
+            }
+
+            if (currentNode.left != null) {
+                queue.offer(new Pair(currentNode.left, distance - 1));
+            }
+
+            if (currentNode.right != null) {
+                queue.offer(new Pair(currentNode.right, distance + 1));
+            }
+        }
+
+        for (int value : topViews.values()) {
+            System.out.print(value + " ");
+        }
+    }
+
+    static class Pair {
+        Node node;
+        int distance;
+
+        Pair(Node node, int distance) {
+            this.node = node;
+            this.distance = distance;
+        }
     }
 }
