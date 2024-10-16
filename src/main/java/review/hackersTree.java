@@ -1,6 +1,10 @@
 package review;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.TreeMap;
@@ -147,5 +151,36 @@ public class hackersTree {
 
         // v1과 v2가 현재 노드를 기준으로 양쪽에 있다면 현재 노드가 공통 조상
         return root;
+    }
+
+    public static List<Integer> getMax(List<String> operations) {
+        // Write your code here
+        Deque<Integer> mainStack = new ArrayDeque<>();
+        Deque<Integer> maxStack = new ArrayDeque<>();
+        List<Integer> result = new ArrayList<>();
+
+        for (String operation : operations) {
+            String[] parts = operation.split(" ");
+            int type = Integer.parseInt(parts[0]);
+
+            if (type == 1) {
+                int value = Integer.parseInt(parts[1]);
+                mainStack.offerLast(value);
+
+                if (maxStack.isEmpty() || value >= maxStack.peekLast()) {
+                    maxStack.offerLast(value);
+                }
+            } else if (type == 2) {
+                int removed = mainStack.pollLast();
+
+                if (!maxStack.isEmpty() && removed == maxStack.peekLast()) {
+                    maxStack.pollLast();
+                }
+            } else if (type == 3) {
+                result.add(maxStack.peekLast());
+            }
+
+        }
+        return result;
     }
 }
