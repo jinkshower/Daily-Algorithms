@@ -6,6 +6,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.TreeMap;
 
@@ -182,5 +183,30 @@ public class hackersTree {
 
         }
         return result;
+    }
+
+    public static int cookies(int k, List<Integer> A) {
+        // Write your code here
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+        for (int i : A) {
+            minHeap.offer(i);
+        }
+        int count = 0;
+        while (minHeap.size() != 1) {
+            if (minHeap.peek() >= k) {
+                return count;
+            }
+
+            int a = minHeap.poll();
+            int b = minHeap.poll();
+            minHeap.offer(a + 2 * b);
+            count++;
+        }
+
+        if (minHeap.peek() >= k) {
+            return count;
+        }
+        return -1;
     }
 }
