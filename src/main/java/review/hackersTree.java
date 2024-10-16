@@ -107,4 +107,25 @@ public class hackersTree {
             }
         }
     }
+
+    public static Node insert(Node root, int data) {
+        // 1. 현재 루트가 null이면, 새로운 노드를 생성해서 반환
+        if (root == null) {
+            return new Node(data);
+        }
+
+        // 2. 삽입할 데이터가 현재 루트 노드의 데이터보다 작으면
+        //    왼쪽 서브트리에 삽입을 시도
+        if (root.data > data) {
+            root.left = insert(root.left, data);
+        }
+        // 3. 삽입할 데이터가 현재 루트 노드의 데이터보다 크거나 같으면
+        //    오른쪽 서브트리에 삽입을 시도
+        else {
+            root.right = insert(root.right, data);
+        }
+
+        // 4. 변경된 루트를 반환
+        return root;
+    }
 }
