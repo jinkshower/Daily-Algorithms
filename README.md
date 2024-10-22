@@ -103,3 +103,5 @@
 [LeetCode739. Daily Temperatures](https://github.com/jinkshower/Daily-Algorithms/commit/530bd245d79302e951de730e0429276045ae1659)
 
 [LeetCode901. Online Stock Span](https://github.com/jinkshower/Daily-Algorithms/commit/be8cc11dd803d35576f0ebe00a8bf24c52b7c52f)
+
+[LeetCode33. Search in Rotated Sorted Array](https://github.com/jinkshower/Daily-Algorithms/commit/36510c850314e88ec218e1f7fafc0e9b5455ef82)
