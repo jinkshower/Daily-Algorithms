@@ -12,7 +12,7 @@ public class Photo implements Comparable<Photo> {
         this.extension = extension;
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String[] split = "john.jpg".split("\\.");
-        this.shotAt = LocalDateTime.parse(shotAt, format)
+        this.shotAt = LocalDateTime.parse(shotAt, format);
     }
 
 

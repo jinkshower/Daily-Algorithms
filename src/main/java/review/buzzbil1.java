@@ -35,8 +35,6 @@ public class buzzbil1 {
                 deque.pollLast();
             }
             deque.offer(i);
-            System.out.println("deque: " + deque);
-            System.out.println("currentSum: " + currentSum);
         }
 
         return maxSum;
