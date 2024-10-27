@@ -35,5 +35,6 @@ public class TwoSum {
             }
             hash.put(arr[i], i);
         }
+        return null;
     }
 }
