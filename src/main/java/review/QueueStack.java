@@ -25,5 +25,6 @@ public class QueueStack {
         Queue<Integer> tmp = left;
         left = right;
         right = tmp;
+        return -1;
     }
 }
